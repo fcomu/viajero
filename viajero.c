@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 char Buffer[9999];
 int contnodo;
@@ -120,8 +121,10 @@ void ArreglarNodo() {
 		i++;
 	}
 	contnodo+=1;
-	L = InsertarFinal(L, contnodo, ejeX, ejeY);
-	L2 = InsertarFinal(L2, contnodo, ejeX, ejeY);
+    if((ejeX != 0) && (ejeY <5000000)){
+        L = InsertarFinal(L, contnodo, ejeX, ejeY);
+        L2 = InsertarFinal(L2, contnodo, ejeX, ejeY);
+    }
 }
 
 
